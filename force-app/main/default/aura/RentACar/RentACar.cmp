@@ -1,0 +1,31 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="carType" type="List" />
+     <aura:attribute name="IsNewAvailble" type="boolean"  default="true" />
+    
+    <div class="slds-box slds-theme_default">
+        
+        <lightning:layout verticalAlign="center" horizontalAlign="center" class="c-container" >
+            <lightning:layoutItem  padding="around-medium">
+                <lightning:select name="CareType" label="Select Type" required="true">
+                    <aura:iteration items="1,2,3,4,5" var="item">
+                        <option  value="{!item / 5}" text="{!item / 5}" /><br/>
+                    </aura:iteration>
+                </lightning:select>                
+            </lightning:layoutItem>
+            <lightning:layoutItem  padding="around-medium">
+                
+                <aura:if isTrue="{!v.IsNewAvailble}">
+                 <lightning:button variant="brand" label="Search" title="Brand action"  />
+                 <lightning:button variant="neutral" label="New" title="Brand action"  />
+                    <aura:set attribute="else">
+                        False
+                    </aura:set>
+                </aura:if> 
+               
+                
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

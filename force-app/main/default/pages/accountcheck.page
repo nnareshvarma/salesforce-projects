@@ -1,0 +1,10 @@
+<apex:page sidebar="false" standardController="account">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:outputfield value="{!account.name}"> </apex:outputfield>
+<apex:inputfield value="{!account.phone}"></apex:inputfield>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

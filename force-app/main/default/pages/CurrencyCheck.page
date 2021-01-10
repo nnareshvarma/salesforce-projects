@@ -1,0 +1,6 @@
+<apex:page controller="FormatCheck">
+<apex:outputtext value="{0, number, ###,###.00}">
+   <apex:param value="{!st}" />
+</apex:outputtext>
+
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page controller="TopicsRecordDownload"  >
+    <apex:form >
+    <apex:pageBlock >
+        
+        <apex:pageBlockSection title="Topics">
+            <apex:outputLabel >TopicsList</apex:outputLabel>	
+         <apex:inputText value="{!topicName}" />
+            <apex:commandButton value="Fetch" action="{!caseTopicsDownload}" />
+        </apex:pageBlockSection>
+    <apex:pageBlockSection id="Pb" title="DownloadPage">
+ 
+            <apex:pageBlockSectionItem >
+                <apex:pageBlockTable value="{!TAControl}" var="TA" >
+                    <apex:column value="{!TA.Id}"/>
+                    <apex:column value="{!TA.EntityType}"/>
+                    <apex:column value="{!TA.CreatedDate}"/>
+                  
+                 </apex:pageBlockTable>
+           
+                 </apex:pageBlockSectionItem>
+               
+           </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

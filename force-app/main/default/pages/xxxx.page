@@ -1,0 +1,16 @@
+<apex:page standardController="contact" extensions="ConExtension" >
+    <apex:form >
+        <apex:pageBlock title="Contact" mode="edit">
+            <apex:pageBlockSection columns="1" showHeader="true" title="contact info">
+        <apex:inputText label="Name" value="{!lastname}" />
+        <apex:inputText label="Amount" value="{!amount}"  />
+                
+         <apex:inputText label="Append" value="{!appendingText}" />       
+            </apex:pageBlockSection>
+            <apex:commandButton value="FinalSubmit" action="{!conSave}" />
+        </apex:pageBlock>
+        
+        
+    </apex:form>
+    
+</apex:page>
